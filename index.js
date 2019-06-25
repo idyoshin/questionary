@@ -56,7 +56,7 @@ app.get('/hello',
 /**
  * Registering save functionality
  */
-app.post('/save', 
+app.post('/api/questionary', 
     (req, res) => {
 
         console.log(`request body = ${JSON.stringify(req.body)}`);
@@ -71,7 +71,7 @@ app.post('/save',
 /**
  * Registering list functionality
  */
-app.get('/', 
+app.get('/api/questionary', 
 
 (req, res) => {
     Questionary.find({}, 'surname name').then(
@@ -88,7 +88,7 @@ app.get('/',
  */
 
 
- app.get('/:id', 
+ app.get('/api/questionary/:id', 
  
  
  (req, res) => {
